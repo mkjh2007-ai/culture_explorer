@@ -895,7 +895,7 @@ function renderResultsUI(topMatches) {
             <strong>🍲 Traditional Food:</strong>
             <p>${dest.traditionalFood}</p>
             <div class="polaroid-frame polaroid-mini">
-              <div class="polaroid-img" style="background-image: url('${dest.foodUrl}'), url('${FALLBACK_IMAGE}'), url('${SVG_FALLBACK}')"></div>
+              <div class="polaroid-img" style="background-image: url('${dest.foodUrl}')"></div>
               <div class="polaroid-caption">local food</div>
             </div>
           </div>
