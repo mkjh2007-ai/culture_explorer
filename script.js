@@ -1327,7 +1327,7 @@ function openDetailModal(destId) {
             <p>${dest.dances}</p>
             <div class="inline-photo-stack">
               <div class="polaroid-frame">
-                <div class="polaroid-img" style="background-image: url('${dest.cultureUrl}'), url('${FALLBACK_IMAGE}'), url('${SVG_FALLBACK}')"></div>
+                <div class="polaroid-img" style="background-image: url('${dest.cultureUrl}')"></div>
                 <div class="polaroid-caption">cultural dance</div>
               </div>
             </div>
