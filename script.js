@@ -660,7 +660,8 @@ function renderDiscoverFeed() {
         
         <!-- Overlapping mini polaroid photo representing local food/culture -->
         <div class="card-overlay-polaroid">
-          <div class="overlay-polaroid-img" style="background-image: url('${dest.foodUrl}'), url('${FALLBACK_IMAGE}'), url('${SVG_FALLBACK}')"></div>
+          <div class="overlay-polaroid-img"
+              style="background-image: url('${dest.foodUrl}')">
           <div class="overlay-polaroid-caption">local taste</div>
         </div>
       </div>
