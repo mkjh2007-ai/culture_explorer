@@ -12,11 +12,11 @@ const DESTINATIONS = [
     country: "Indonesia",
     flag: "🇮🇩",
     imageColor: "linear-gradient(135deg, #10B981, #06B6D4)",
-    imageUrl: "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=600&q=80", // Borobudur overview
-    foodUrl: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=300&q=80",      // Jackfruit/Gudeg context
-    craftUrl: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=300&q=80",     // Batik textiles
-    monumentUrl: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=300&q=80",  // Prambanan Context
-    cultureUrl: "https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&w=300&q=80",   // Traditional dance ceremony
+    imageUrl: "images/Yogyakarta/yogyakarta-cover.jpeg",
+    foodUrl: "images/Yogyakarta/yogyakarta-food.jpeg",
+    craftUrl: "images/Yogyakarta/yogyakarta-culture.jpeg",
+    cultureUrl: "images/Yogyakarta/yogyakarta-dance.jpeg",
+    monumentUrl: "images/Yogyakarta/yogyakarta-monument.jpeg",
     culturalSignificance: "The cradle of Javanese civilization, Yogyakarta is a royal city where ancient sultanates, artistic traditions, and spiritual heritage remain an active part of daily life rather than just history.",
     traditionalFood: "Gudeg - a slow-cooked, rich stew made from young jackfruit, coconut milk, palm sugar, and local spices, served with chicken and rice.",
     artCraft: "Batik Tulis - the meticulous process of hand-drawing wax-resist patterns on textiles, and silver filigree crafting in the historical district of Kotagede.",
