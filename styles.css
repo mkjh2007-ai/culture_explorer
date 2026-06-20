@@ -1290,12 +1290,11 @@ main {
 }
 
 .journal-header-banner {
-  padding: 50px 40px;
-  color: var(--bg-card);
-  position: relative;
-  border-bottom: var(--line-border);
-  background-size: cover;
-  background-position: center;
+    padding: 50px 40px;
+    min-height: 280px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .stamp-postmark {
