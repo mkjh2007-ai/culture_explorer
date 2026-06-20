@@ -1527,8 +1527,8 @@ main {
 
 .card-overlay-polaroid {
   position: absolute;
-  bottom: -15px;
-  right: 15px;
+  bottom: 8px;
+  right: 10px;
   width: 70px;
   height: 84px;
   background-color: var(--bg-card);
