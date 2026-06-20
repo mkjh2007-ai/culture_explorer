@@ -903,7 +903,7 @@ function renderResultsUI(topMatches) {
             <strong>🏺 Arts & Crafts:</strong>
             <p>${dest.artCraft}</p>
             <div class="polaroid-frame polaroid-mini">
-              <div class="polaroid-img" style="background-image: url('${dest.craftUrl}'), url('${FALLBACK_IMAGE}'), url('${SVG_FALLBACK}')"></div>
+              <div class="polaroid-img" style="background-image: url('${dest.craftUrl}')"></div>
               <div class="polaroid-caption">artisan craft</div>
             </div>
           </div>
@@ -1315,7 +1315,7 @@ function openDetailModal(destId) {
             <p>${dest.artCraft}</p>
             <div class="inline-photo-stack">
               <div class="polaroid-frame">
-                <div class="polaroid-img" style="background-image: url('${dest.craftUrl}'), url('${FALLBACK_IMAGE}'), url('${SVG_FALLBACK}')"></div>
+                <div class="polaroid-img" style="background-image: url('${dest.craftUrl}')"></div>
                 <div class="polaroid-caption">artisan craft</div>
               </div>
             </div>
