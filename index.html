@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culture Explorer - Discover Hidden Gems Around the World</title>
+  <meta name="description" content="Embark on a voyage of discovery! Complete our travel recommendation quiz to find unique destinations based on local traditions, ancestral crafts, food culture, and historical monuments.">
+  <!-- Link stylesheets and custom scripts -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- 1. Header Navigation Bar (Zine Tabbed Divider) -->
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo-block" onclick="switchTab('explore')">
+        <span class="logo-badge">📮</span>
+        <div class="logo-text">
+          <h1>culture explorer</h1>
+          <p>An Illustrated Travel Zine</p>
+        </div>
+      </a>
+      
+      <nav class="navigation-tabs">
+        <button class="nav-tab-btn active" data-tab="explore">
+          <span>🌍</span> discover
+        </button>
+        <button class="nav-tab-btn" data-tab="quiz">
+          <span>✈️</span> passport quiz
+        </button>
+        <button class="nav-tab-btn" data-tab="planner">
+          <span>📓</span> my journal
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 2. Main Page Body (Zine Layout) -->
+  <main>
+    <div class="zine-binder-sheet">
+
+      <!-- SECTION A: Discover Feed (Pinterest-style Board) -->
+      <section id="section-explore" class="content-section active">
+        
+        <!-- Hero Zine Collage -->
+        <div class="hero-journal">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <h2>collect stories, <br><span class="highlight-yellow">not destinations.</span></h2>
+              <p>Skip the standard travel booklets. Discover deep cultural heritage, traditional arts, ancestral dances, and local street food around the globe. Take our visual quiz to stamp your passport to hidden gems!</p>
+              <div style="position: relative; display: inline-block;">
+                <button class="btn-primary" id="btn-start-quiz">Take The Passport Quiz ✈️</button>
+                <!-- Whimsical hand-drawn SVG arrow -->
+                <svg style="position: absolute; bottom: -45px; right: -60px; width: 60px; height: 60px;" viewBox="0 0 100 100" fill="none" stroke="#2D2B2A" stroke-width="3">
+                  <path d="M10,80 Q35,90 70,60 Q75,55 80,45" />
+                  <path d="M60,48 L80,45 L78,65" />
+                </svg>
+              </div>
+            </div>
+            <!-- Dynamic Polaroid grid collage rendered in JS -->
+            <div class="hero-collage" id="hero-collage-container">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Discover Filter System -->
+        <div class="discover-filter-bar">
+          <div class="search-box-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="discover-search" class="discover-search-input" placeholder="Search by name, country, or keyword...">
+          </div>
+          
+          <div class="filter-chips-container">
+            <button class="filter-chip active" data-filter="all">All Discoveries</button>
+            <button class="filter-chip" data-filter="history">🏛️ History</button>
+            <button class="filter-chip" data-filter="culture">🎭 Culture</button>
+            <button class="filter-chip" data-filter="art">🎨 Art & Crafts</button>
+            <button class="filter-chip" data-filter="nature">🌲 Nature</button>
+            <button class="filter-chip" data-filter="food">🍜 Food</button>
+            <button class="filter-chip" data-filter="shopping">🛍️ Markets</button>
+          </div>
+        </div>
+
+        <!-- Masonry Grid for Destinations -->
+        <div class="discover-grid" id="discover-grid">
+          <!-- Rendered dynamically via JavaScript -->
+        </div>
+      </section>
+
+      <!-- SECTION B: Recommendation Quiz (Passport Booklet) -->
+      <section id="section-quiz" class="content-section">
+        <div class="quiz-container">
+          
+          <!-- Active Question Deck -->
+          <div class="quiz-ticket-card" id="quiz-active-deck">
+            <div class="quiz-header">
+              <div class="quiz-badge-title">Visa Questionnaire</div>
+              <div class="quiz-progress-wrapper">
+                <div class="quiz-step-text" id="quiz-step-indicator">Question 1 of 9</div>
+                <div class="quiz-progress-track">
+                  <div class="quiz-progress-bar" id="quiz-progress"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="quiz-body">
+              <h3 class="quiz-question-h3" id="quiz-question-title">Select your cultural focus:</h3>
+              <div class="quiz-answers-deck" id="quiz-answers-grid">
+                <!-- Options rendered dynamically via JavaScript -->
+              </div>
+            </div>
+            
+            <div class="quiz-footer">
+              <button class="btn-secondary" id="btn-prev-question">← Go Back</button>
+              <button class="btn-primary" id="btn-next-question" disabled>Next Step →</button>
+            </div>
+          </div>
+
+          <!-- Quiz Results Panel (Hidden Initially) -->
+          <div id="quiz-results-card" style="display: none;">
+            <div class="results-board-header">
+              <h2>Your Collectible Matches 📮</h2>
+              <p>We've stamped your itinerary recommendations inside your journal!</p>
+            </div>
+            
+            <div class="results-list-deck" id="quiz-results-list">
+              <!-- Results rendered dynamically via JavaScript -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+              <button class="btn-primary" id="btn-restart-quiz">Retake Quiz 🔄</button>
+              <button class="btn-secondary" style="margin-left: 15px;" onclick="switchTab('planner')">Write in Journal 📓</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION C: Travel Journal & Planner -->
+      <section id="section-planner" class="content-section">
+        <div class="planner-layout">
+          
+          <!-- Compare Widget Box -->
+          <div class="comparison-container-box" id="comparison-trigger-box" style="display: none;">
+            <h2>compare travel plans ⚖️</h2>
+            <p>Select two of your saved destinations to view a side-by-side comparison.</p>
+            <div class="comparison-grid-widget">
+              <select class="compare-dropdown" id="compare-select-a">
+                <!-- Populated via Javascript -->
+              </select>
+              <span style="font-weight: 800; font-size: 1.2rem; font-family: var(--font-editorial);">vs</span>
+              <select class="compare-dropdown" id="compare-select-b">
+                <!-- Populated via Javascript -->
+              </select>
+              <button class="btn-compare-action" onclick="triggerComparison()">Compare side-by-side</button>
+            </div>
+          </div>
+
+          <div>
+            <h2 style="font-size: 2.8rem; text-transform: lowercase; font-style: italic; margin-bottom: 25px; border-bottom: 3px solid var(--pastel-pink); display: inline-block;">My Travel Journal Entries 📓</h2>
+            <div class="planner-saved-grid" id="planner-saved-list">
+              <!-- Saved items rendered dynamically via JavaScript -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+      
+    </div>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- MODAL: Destination Detailed Cultural Journal -->
+  <!-- ========================================== -->
+  <div class="modal-overlay" id="modal-detail">
+    <div class="modal-wrapper">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-body-content" id="detail-modal-body">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL: Side-by-Side Comparison Chart -->
+  <!-- ========================================== -->
+  <div class="modal-overlay" id="modal-compare">
+    <div class="modal-wrapper" style="max-width: 950px;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="compare-modal-padding">
+        <h2 style="font-size: 2.4rem; text-transform: lowercase; font-style: italic; margin-bottom: 5px;">Side-by-Side Discovery Comparison</h2>
+        <p style="color: #6B7280; margin-bottom: 25px; font-family: var(--font-body);">Compare cultural details, traditional food, activities, and budget options side-by-side.</p>
+        <div class="modal-body-content" id="compare-modal-body" style="overflow-x: auto;">
+          <!-- Table rendered dynamically via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
