@@ -653,7 +653,7 @@ function renderDiscoverFeed() {
     card.setAttribute("data-id", dest.id);
     
     card.innerHTML = `
-      <div class="card-image-wrapper" style="background-image: url('${dest.imageUrl}'), url('${FALLBACK_IMAGE}'), url('${SVG_FALLBACK}')">
+      <div class="card-image-wrapper" style="background-image: url('${dest.imageUrl}')">
         <div class="card-washi-tape"></div>
         <div class="card-stamp">${dest.flag}</div>
         <div class="card-sticker-tag">${dest.country}</div>
