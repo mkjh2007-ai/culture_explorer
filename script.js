@@ -12,7 +12,7 @@ const DESTINATIONS = [
     country: "Indonesia",
     flag: "🇮🇩",
     imageColor: "linear-gradient(135deg, #10B981, #06B6D4)",
-    imageUrl: "/culture_explorer/images/Yogyakarta/yogyakarta-food.jpeg",
+    imageUrl: "/culture_explorer/images/Yogyakarta/yogyakarta-cover.jpeg",
     foodUrl: "/culture_explorer/images/Yogyakarta/yogyakarta-food.jpeg",
     craftUrl: "/culture_explorer/images/Yogyakarta/yogyakarta-culture.jpeg",
     cultureUrl: "/culture_explorer/images/Yogyakarta/yogyakarta-dance.jpeg",
