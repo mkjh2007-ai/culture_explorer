@@ -1304,7 +1304,7 @@ function openDetailModal(destId) {
             <p>${dest.traditionalFood}</p>
             <div class="inline-photo-stack">
               <div class="polaroid-frame">
-                <div class="polaroid-img" style="background-image: url('${dest.foodUrl}'), url('${FALLBACK_IMAGE}'), url('${SVG_FALLBACK}')"></div>
+                <div class="polaroid-img" style="background-image: url('${dest.foodUrl}')"></div>
                 <div class="polaroid-caption">traditional food</div>
               </div>
             </div>
