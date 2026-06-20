@@ -1338,7 +1338,7 @@ function openDetailModal(destId) {
             <p>${dest.monuments}</p>
             <div class="inline-photo-stack">
               <div class="polaroid-frame">
-                <div class="polaroid-img" style="background-image: url('${dest.monumentUrl}'), url('${FALLBACK_IMAGE}'), url('${SVG_FALLBACK}')"></div>
+                <div class="polaroid-img" style="background-image: url('${dest.monumentUrl}')"></div>
                 <div class="polaroid-caption">historical highlight</div>
               </div>
             </div>
